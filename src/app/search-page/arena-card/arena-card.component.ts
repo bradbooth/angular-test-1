@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ArenaCardComponent implements OnInit {
 
   isCollapsed: any;
-  
+  contactFormModalName: any;
+  contactFormModalEmail: any;
+  contactFormModalSubject: any;
+  contactFormModalMessage: any;
+
   constructor() { }
 
   ngOnInit() {

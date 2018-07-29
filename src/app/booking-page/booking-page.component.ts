@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingPageComponent implements OnInit {
 
+  contactFormModalName: any;
+  contactFormModalEmail: any;
+  contactFormModalSubject: any;
+  contactFormModalMessage: any;
+  
   constructor() { }
 
   ngOnInit() {
