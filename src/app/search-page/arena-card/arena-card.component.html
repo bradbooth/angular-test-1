@@ -1,0 +1,105 @@
+
+<div class="container card-container">
+  <div class="row">
+    <div class="col-12">
+      <!-- Card -->
+      <div class="card">
+      
+        <!-- Card image -->
+        <div class="view overlay card-image-container">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body">
+      
+          <!-- Title -->
+          <h4 class="card-title">Soccer Arena</h4>
+          <!-- Text -->
+          <ul class="arena-info-list" style="list-style-type: none;">
+            <li>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <strong> Location:</strong> Toronto, Ontario</li>
+            <li>
+                <i class="fa fa-futbol-o" aria-hidden="true"></i>
+                <strong> Arena Type:</strong> Indoor</li>
+            <li>
+                <i class="fa fa-group" aria-hidden="true"></i>
+                <strong> Players:</strong> 6-12
+            </li>
+          </ul>
+
+          <!-- More Information -->
+          <div class="" [mdbCollapse]="isCollapsed" #test="bs-collapse">
+              <p>Here is more information regarding the arena</p>
+              <app-map></app-map>
+          </div>
+          <!-- Buttons -->
+          <button class="btn btn-primary waves-light float-right" type="button" (click)="test.toggle()" mdbWavesEffect>
+              More Info
+          </button>
+
+          <!-- Booking Popup -->
+          <!-- This violates angulars principles so hard -->
+          <button type="button" class="btn btn-default btn-rounded float-right" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+            mdbWavesEffect>Book Now</button>
+
+            <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <i class="fa fa-user prefix grey-text"></i>
+                  <input type="text" id="form34" class="form-control validate" mdbInputDirective [formControl]="contactFormModalName">
+                  <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <i class="fa fa-envelope prefix grey-text"></i>
+                  <input type="email" id="form29" class="form-control validate" mdbInputDirective [formControl]="contactFormModalEmail">
+                  <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <i class="fa fa-tag prefix grey-text"></i>
+                  <input type="text" id="form32" class="form-control validate" mdbInputDirective [formControl]="contactFormModalSubject">
+                  <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                </div>
+
+                <div class="md-form">
+                  <i class="fa fa-pencil prefix grey-text"></i>
+                  <textarea type="text" id="form8" class="md-textarea form-control" rows="1" mdbInputDirective [formControl]="contactFormModalMessage"></textarea>
+                  <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                </div>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-unique waves-light" mdbWavesEffect>Send
+                  <i class="fa fa-paper-plane-o ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+</div>
+          
+
+          
+ 
+      
+        </div>
+      
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+</div>
